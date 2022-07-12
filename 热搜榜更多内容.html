@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热搜榜更多内容</title>
+    <link rel="stylesheet" href="Tencent.css">
+    <link rel="stylesheet" href="全网热搜榜.html">
+    <style>
+        /* 字体图标引用的css --在icomoon.zip中的style.css中*/
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?rt8wxy');
+            src: url('fonts/icomoon.eot?rt8wxy#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?rt8wxy') format('truetype'),
+                url('fonts/icomoon.woff?rt8wxy') format('woff'),
+                url('fonts/icomoon.svg?rt8wxy#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        div[class^=icon] {
+            float: left;
+            width: 97px;
+        }
+
+        div[class^=icon] span {
+            font-family: 'icomoon';
+            font-size: 47px;
+
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            margin-left: 28px;
+        }
+
+        div[class^=icon] span a {
+            color: #666666;
+        }
+
+        div[class^=icon] a:hover,
+        div[class^=icon] p:hover {
+            color: #ff5c38;
+        }
+
+        div[class^=icon] p {
+            text-align: center;
+        }
+
+
+
+        /* 框架css */
+        .net {
+            width: 1920px;
+            height: 1860px;
+            margin: 0px auto;
+            background: #fff;
+            /* background-color: rgb(194, 62, 135); */
+        }
+
+        /* ----------------------------------- */
+        /* 热搜榜内容css */
+        article {
+            margin: 0px;
+            height: 280px;
+        }
+
+        /* 返回css */
+        .return {
+            width: 1800px;
+            height: 80px;
+            margin: 0px auto;
+        }
+
+        .return a {
+            color: #666666;
+            font-size: 18px;
+        }
+
+        .return a:hover {
+            color: #ff5c38;
+        }
+
+        .return .img {
+            padding-top: 5px;
+            float: left;
+            height: 22px;
+            width: 22px;
+            margin: 0px;
+            margin-right: 25px;
+        }
+
+        .return img {
+            height: 22px;
+            width: 22px;
+        }
+
+        .return p {
+            float: left;
+        }
+
+        .return .r1 {
+            padding-top: 5px;
+        }
+
+        .return .r2 {
+            position: relative;
+            height: 80px;
+            width: 80px;
+            font-size: 25px;
+            color: #ff5c38;
+            font-weight: 700;
+            margin-left: 785px;
+        }
+
+
+        .return .r2::after {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 40px;
+            left: -3px;
+            width: 17px;
+            height: 4px;
+            margin: auto;
+            border-radius: 4px;
+            background: #ff5c38;
+            content: "";
+        }
+
+        /* .return .r2::after {
+            content: url(images/全网热搜榜/不变.png);
+        } */
+
+
+        /* 关键字css */
+        .rank p {
+            height: 60px;
+            float: left;
+            line-height: 60px;
+            color: #666666;
+            font-size: 18px;
+        }
+
+        .p1 {
+            margin: 0px 470px 0px 5px;
+        }
+
+        .p2 {
+            margin: 0px 1125px 0px 0px;
+        }
+
+        /* 列表css */
+        .out {
+            height: 864px;
+            width: 1815px;
+            padding: 0px auto;
+        }
+
+        div[class^=out-] {
+            float: left;
+            margin: 0px 10px;
+            /* width: 585px; */
+            width: 1815px;
+            height: 885px;
+            background-color: #fafafa;
+        }
+
+        div[class^=list] {
+            height: 805px;
+            background-color: #f4f4f4;
+        }
+
+        div[class^=list-out] {
+            height: 805px;
+        }
+
+        div[class^=list-out] ol li {
+            list-style-type: none;
+            height: 74px;
+        }
+
+        div[class^=rank] {
+            height: 60px;
+        }
+
+        div[class^=rank] h3 {
+            font-size: 22px;
+            color: #666666;
+            display: inline-block;
+            width: 300px;
+            line-height: 60px;
+            margin-left: 15px;
+        }
+
+        div[class^=more] {
+            float: right;
+            width: 65px;
+        }
+
+        div[class^=more] .more-text {
+            display: inline-block;
+            line-height: 60px;
+            font-size: 14.5px;
+            color: #666666;
+        }
+
+        div[class^=more] .ic {
+            float: right;
+            margin-right: 15px;
+            margin-top: 20px;
+        }
+
+        div[class^=more] .ic img {
+            width: 15px;
+            height: 15px;
+        }
+
+        div[class^=more] .ico {
+            width: 14px;
+            height: 14px;
+        }
+
+        div[class^=list] span {
+            color: #111111;
+            font-size: 20px;
+        }
+
+        div[class^=list] .num {
+            float: left;
+            width: 30px;
+            height: 74px;
+            line-height: 74px;
+            margin-left: 20px;
+            color: #ff183e;
+        }
+
+        div[class^=list] .name {
+            float: left;
+            height: 74px;
+            width: 480px;
+            line-height: 74px;
+        }
+
+        div[class^=list] .name:hover {
+            color: #ff5c38;
+        }
+
+        .ico {
+            float: left;
+            width: 32px;
+        }
+
+        .ico img {
+            width: 14px;
+            height: 14px;
+            margin: 30px 0px;
+        }
+
+        /* 加的盒子 */
+        .bili {
+            /* width: 1230; */
+            width: 1210px;
+            height: 74px;
+            float: left;
+        }
+
+        .bar {
+            float: left;
+            display: block;
+            position: relative;
+            width: 480px;
+            height: 12px;
+            margin-top: 30px;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #eaeaea;
+        }
+
+        .bar span[class^=percent] {
+            /* width: 100%; */
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 12px;
+            border-radius: 10px;
+            background: #ff5c38;
+        }
+
+        .percent1 {
+            width: 100%;
+        }
+
+        .percent2 {
+            width: 96%;
+        }
+
+        .percent3 {
+            width: 90%;
+        }
+
+        .percent4 {
+            width: 82%;
+        }
+
+        .percent5 {
+            width: 80%;
+        }
+
+        .percent6 {
+            width: 80%;
+        }
+
+        .percent7,
+        .percent8,
+        .percent9,
+        .percent10 {
+            width: 77%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="net">
+        <!-- 1、top部分 -->
+        <div class="header-top" style="position: relative; z-index: 0;opacity: 1;;">
+            <a href="index.html"><img src="images/header/logo-ps抠图.png" alt=""></a>
+            <div class="search" style="border:1px #ff5c38 solid; border-radius: 26px;">
+                <input type="search" class="cin" placeholder="奔跑吧 第5季">
+                <div class="hot">
+                    <a href="全网热搜榜.html" target="_blank">热搜榜</a>
+                </div>
+                <div class="see"></div>
+                <button>全网搜</button>
+            </div>
+            <div class="select">
+                <img src="images/header/图标/VIP1.png" alt="">
+                <img src="images/header/图标/历史1.png" alt="">
+                <img src="images/header/图标/创作中心1.png" alt="">
+                <img src="images/header/图标/画质1.png" alt="">
+                <div class="circle">
+                    <a href="QQ注册页面.html" target="_blank"><img class="register" src="images/header/图标/1-1.png"
+                            alt=""></a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 内容部分 -->
+        <article>
+            <img src="images/全网热搜榜/boot.png" alt="">
+        </article>
+
+        <!-- 返回部分 -->
+        <div class="return">
+            <a href="全网热搜榜.html" class="a">
+                <div class="img">
+                    <img src="images/全网热搜榜/返 回.png" alt="">
+                </div>
+                <p class="r1">返回</p>
+            </a>
+            <p class="r2">电视剧</p>
+        </div>
+
+        <!-- 列表部分 -->
+        <div class="out">
+            <div class="out-left">
+                <div class="rank">
+                    <!-- <img src="images/全网热搜榜/关键字.png" alt=""> -->
+                    <p class="p1">关键字</p>
+                    <p class="p2">搜索热度</p>
+                    <p class="p3">升降趋势</p>
+                </div>
+                <div class="list">
+                    <div class="list-out">
+                        <ol>
+                            <li>
+                                <a href="#">
+                                    <span class="num">1</span>
+                                    <span class="name">千古玦尘</span>
+                                    <div class="bili">
+                                        <div class="bar"><span class="percent1"></span></div>
+                                    </div>
+                                    <div class="ico">
+                                        <img src="images/全网热搜榜/不变.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="#">
+                                    <span class="num">2</span>
+                                    <span class="name">斗罗大陆</span>
+                                    <div class="bili">
+                                        <div class="bar"><span class="percent2"></span></div>
+                                    </div>
+                                    <div class="ico">
+                                        <img src="images/全网热搜榜/不变.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="#">
+                                    <span class="num">3</span>
+                                    <span class="name">奔跑吧 第5季</span>
+                                    <div class="bili">
+                                        <div class="bar"><span class="percent3"></span></div>
+                                    </div>
+                                    <div class="ico">
+                                        <img src="images/全网热搜榜/不变.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="#">
+                                    <span class="num">4</span>
+                                    <span class="name">极限挑战</span>
+                                    <div class="bili">
+                                        <div class="bar"><span class="percent4"></span></div>
+                                    </div>
+                                    <div class="ico">
+                                        <img src="images/全网热搜榜/不变.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="#">
+                                    <span class="num">6</span>
+                                    <span class="name">拜托了冰箱 轰趴季</span>
+                                    <div class="bili">
+                                        <div class="bar"><span class="percent5"></span></div>
+                                    </div>
+                                    <div class="ico">
+                                        <img src="images/全网热搜榜/不变.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="#">
+                                    <span class="num">5</span>
+                                    <span class="name">斗破苍穹 第4季</span>
+                                    <div class="bili">
+                                        <div class="bar"><span class="percent6"></span></div>
+                                    </div>
+                                    <div class="ico">
+                                        <img src="images/全网热搜榜/不变.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="#">
+                                    <span class="num">7</span>
+                                    <span class="name">双世宠妃3</span>
+                                    <div class="bili">
+                                        <div class="bar"><span class="percent7"></span></div>
+                                    </div>
+                                    <div class="ico">
+                                        <img src="images/全网热搜榜/上升.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="#">
+                                    <span class="num">8</span>
+                                    <span class="name">不说再见</span>
+                                    <div class="bili">
+                                        <div class="bar"><span class="percent8"></span></div>
+                                    </div>
+                                    <div class="ico">
+                                        <img src="images/全网热搜榜/不变.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="#">
+                                    <span class="num">9</span>
+                                    <span class="name">五十公里桃花坞</span>
+                                    <div class="bili">
+                                        <div class="bar"><span class="percent9"></span></div>
+                                    </div>
+                                    <div class="ico">
+                                        <img src="images/全网热搜榜/下降.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="#">
+                                    <span class="num">10</span>
+                                    <span class="name">王牌对王牌 第6季</span>
+                                    <div class="bili">
+                                        <div class="bar"><span class="percent10"></span></div>
+                                    </div>
+                                    <div class="ico">
+                                        <img src="images/全网热搜榜/上升.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 尾部 -->
+        <footer>
+            <div class="line">
+                <hr size="3px" color="#ff5c38">
+            </div>
+            <div class="footer">
+                <!-- 1、links部分 -->
+                <div class="links1">
+                    <img src="images/footer/links1.png" alt="">
+                </div>
+                <div class="links2">
+                    <dl>
+                        <dt>特色推荐</dt>
+                        <dd><a href="#">自制推荐</a></dd>
+                        <dd><a href="#">杀毒软件</a></dd>
+                    </dl>
+                </div>
+                <div class="links3">
+                    <h4>软件下载</h4>
+                    <div class="icon1">
+                        <span><a href="https://v.qq.com/biu/download#iPhone" target="blank"></a></span>
+                        <p>手机版</p>
+                    </div>
+                    <div class="icon2">
+                        <span><a href="https://v.qq.com/biu/download#Windows" target="blank"></a></span>
+                        <p>Windows版</p>
+                    </div>
+                    <div class="icon3">
+                        <span><a href="https://v.qq.com/biu/download#Mac" target="blank"></a></span>
+                        <P>Mac版</P>
+                    </div>
+                    <div class="icon4">
+                        <span><a href="https://v.qq.com/biu/download#Pad" target="blank"></a></span>
+                        <p>iPad版</p>
+                    </div>
+                    <div class="icon5">
+                        <span><a href="https://v.qq.com/biu/download#TV" target="blank"></a></span>
+                        <p>TV版</p>
+                    </div>
+                </div>
+                <div class="links4">
+                    <dl>
+                        <dt>服务</dt>
+                        <dd><a href="#">客服</a></dd>
+                        <dd><a href="#">反馈</a></dd>
+                        <dd><a href="#">侵权投诉</a></dd>
+                        <dd><a href="#">免广告合作</a></dd>
+                        <dd><a href="#">vip采购</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- 2、声明部分部分 -->
+            <div class="speak">
+                <p>粤网文[2017]6138-1456号 | 网络视听许可证1904073号 | 增值电信业务经营许可证：粤B2-20090059 | 粤公网安备 44030002000001号</p>
+                <p>关于腾讯 | About Tencent | 服务条款 | 广告服务 | 腾讯招聘 | 客服中心 | 网站导航</p>
+                <p>Copyright © 1998 - 2021 Tencent. All Rights Reserved.</p>
+                <p>腾讯公司 版权所有</p>
+            </div>
+            <div class="img">
+                <a href="#"><img src="images/footer/工商网监.png" alt=""></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

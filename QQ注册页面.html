@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Lencamo</title>
+    <meta name="Lencamo" content="欢迎注册QQ" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(231, 226, 226);
+        }
+
+        .box {
+            margin: 100px auto;
+            width: 880px;
+            height: 860px;
+            background-color: #ffffff;
+        }
+
+        .nav {
+            height: 80px;
+            font-size: 17px;
+            /* background-color: rgb(209, 239, 248); */
+        }
+
+        .nav img {
+            float: left;
+            width: 630px;
+            height: 80px;
+        }
+
+        .nav form .font {
+            float: left;
+            height: 80px;
+            width: 100px;
+            border: none;
+            font-size: 17px;
+            color: #666666
+                /* background-color: rgb(126, 89, 89); */
+        }
+
+        .nav p a {
+            display: inline-block;
+            margin-left: 30px;
+            line-height: 80px;
+            text-decoration: none;
+            color: #666666;
+        }
+
+        .nav p a:hover,
+        .nav form .font:hover {
+            color: #000000;
+        }
+
+        .register {
+            margin: 0px 180.5px;
+            width: 515px;
+            height: 750px;
+            background-color: #fff;
+        }
+
+        .register h1 {
+            margin-left: 15px;
+            height: 100px;
+            font-size: 45px;
+            line-height: 100px;
+            font-weight: 400;
+            /* background-color: rgb(230, 150, 150); */
+        }
+
+        .register .content {
+            margin: 0px 15px;
+            height: 70px;
+            font-size: 30px;
+            /* background-color: rgb(94, 240, 196); */
+        }
+
+        .register .content p {
+            float: left;
+        }
+
+        .register .content a {
+            float: right;
+            text-decoration: none;
+            color: rgb(97, 171, 255);
+        }
+
+        .register div[class^="select"] {
+            height: 105px;
+        }
+
+        .register div input {
+            margin: 28px 15px;
+            height: 50px;
+            width: 480px;
+            border: 0.8px solid rgb(179, 179, 179);
+            border-radius: 5px;
+
+            font-size: 20px;
+            text-indent: 20px;
+            color: rgb(179, 179, 179);
+        }
+
+        .register div select {
+            float: left;
+            margin: 28px 15px 5px;
+            height: 50px;
+            width: 155px;
+            border: 0.8px solid rgb(179, 179, 179);
+            border-radius: 5px;
+
+            font-size: 20px;
+            text-indent: 20px;
+            /* color: rgb(179, 179, 179); */
+        }
+
+        .register div .phone_number {
+            float: left;
+            margin: 28px 5px 15px;
+            height: 50px;
+            width: 305px;
+            border: 0.8px solid rgb(179, 179, 179);
+            border-radius: 5px;
+
+            font-size: 20px;
+            text-indent: 20px;
+            /* color: rgb(179, 179, 179); */
+        }
+
+
+        .register div input:hover,
+        select:hover {
+            border-color: rgb(119, 119, 119);
+        }
+
+        .register div input:focus,
+        select:focus {
+
+            border: 0.8px solid #549df8;
+            /*由于border较细，将outline设置为none。视觉上体验更佳！*/
+            outline: none;
+        }
+
+        /* .register div:nth-of-type(2n) {
+            background-color: rgb(231, 207, 207);
+        } */
+
+        .register .enter {
+            height: 135px;
+        }
+
+        .register .enter input {
+            height: 60px;
+            font-size: 23px;
+            color: #ffffff;
+            font-weight: 200;
+            background-color: #3588ff;
+        }
+
+        .register .enter input:hover {
+            background-color: #327eeb;
+        }
+
+        .register .agree {
+            height: 25px;
+            font-size: 15px;
+            color: rgb(179, 179, 179);
+            line-height: 25px;
+            /* background-color: rgb(193, 240, 252); */
+        }
+
+        .register .agree input {
+            margin: 0px 0px 0px 15px;
+            height: 17px;
+            width: 17px;
+            /* color: #3588ff;
+            background-color: #fff; */
+        }
+
+        .register .rule {
+            height: 75px;
+            /* background-color: rgb(245, 149, 240); */
+        }
+
+        .register .footer {
+            height: 32px;
+            color: rgb(194, 192, 192);
+            text-align: center;
+            font-size: 13px;
+            line-height: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="nav">
+            <img src="images/QQ注册页面/icon.png" alt="">
+            <form action="">
+                <select name="" id="" class="font">
+                    <option value="简体中文">简体中文</option>
+                    <option value="繁体中文">繁体中文</option>
+                    <option value="English">English</option>
+                </select>
+            </form>
+            <p><a href="https://support.qq.com/products/14802">意见反馈</a></p>
+        </div>
+        <div class="register">
+            <h1>欢迎注册QQ</h1>
+            <div class="content">
+                <p>每一天，乐在沟通。</p>
+                <a href="https://ssl.zc.qq.com/v3/index-chs.html?type=3">免费靓号</a>
+            </div>
+            <div class="select1">
+                <form action="">
+                    <input type="text" placeholder="昵称" required="required">
+                </form>
+            </div>
+            <div class="select2">
+                <form action="">
+                    <input type="password" placeholder="密码" required="required">
+                </form>
+            </div>
+            <div class="select3">
+                <form action="">
+                    <select name="" id="">
+                        <option value="中国 +86">+86</option>
+                        <option value="中国香港特别行政区 +852">+852</option>
+                        <option value="中国澳门特别行政区 +853">+853</option>
+                        <option value="中国台湾地区">+886</option>
+                        <option value="朝鲜">+850</option>
+                        <option value="韩国">+82</option>
+                    </select>
+                    <input type="tel" class="phone_number" placeholder="手机号码" required="required">
+                </form>
+            </div>
+            <div class="enter">
+                <input type="submit" value="立即注册" required="required">
+            </div>
+            <div class="agree">
+                <input type="checkbox" value="" checked="checked" required="required">
+                我已阅读并同意相关服务条款和隐私政策
+            </div>
+            <div class="rule"></div>
+            <div class="footer">
+                <p>Copyright @ 1998-2021 Tencent All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

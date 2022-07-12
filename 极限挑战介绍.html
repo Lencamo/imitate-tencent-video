@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极限挑战介绍</title>
+    <link rel="stylesheet" href="Tencent.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .box {
+            height: 360px;
+            background-color: #f8f8f8;
+
+        }
+
+        .challage {
+            width: 1705px;
+            height: 310px;
+            padding: 20px 0px;
+            margin: 0px auto;
+            background-color: #f8f8f8;
+        }
+
+        .challage-right {
+            margin-left: 20px;
+        }
+
+        .challage>div {
+            float: left;
+        }
+
+
+
+        /* 头像模块css */
+        .introduce {
+            height: 80px;
+        }
+
+        .tou {
+            float: left;
+            height: 75px;
+            width: 50px;
+            margin: 0px 20px 0px 30px;
+            padding-top: 5px;
+            font-size: 10px;
+            color: #666666;
+        }
+
+        .tou .png {
+            position: relative;
+            overflow: hidden;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .tou .png img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .tou span {
+            display: inline-block;
+            height: 25px;
+            width: 50px;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+
+        /* 按钮模块css */
+        .down {
+            height: 130px;
+            width: 1465px;
+        }
+
+        .down .player {
+            position: relative;
+            float: left;
+            height: 40px;
+            width: 140px;
+            margin: 85px 0px 0px;
+            border: none;
+            border-radius: 20px;
+            background-color: #ff5c38;
+        }
+
+        .down .player:hover {
+            background-color: #ff183e;
+        }
+
+        .down .player .shell {
+            position: absolute;
+            z-index: 1;
+            top: 8px;
+            left: 25px;
+        }
+
+        .down .player .shell a {
+            color: #ffffff;
+        }
+
+        .down .player .shell img {
+            vertical-align: middle;
+        }
+
+        .down .blank {
+            float: left;
+            width: 1325px;
+            height: 130px;
+        }
+
+        /* 隐藏模块 */
+        .tou {
+            position: relative;
+        }
+
+        div[class^=brief] {
+            position: absolute;
+            z-index: 2;
+            top: 80px;
+            display: none;
+            /* height: 250px;
+            width: 490px; */
+            height: 205px;
+            width: 405px;
+            box-shadow: 0 28px 50px rgb(25 24 40 / 35%)
+        }
+
+        div[class^=brief] img {
+            height: 205px;
+            width: 405px;
+        }
+
+        .tou:hover div[class^=brief] {
+            display: block;
+        }
+
+        .brief1 {
+            left: -15px;
+        }
+
+        .brief2 {
+            left: -115px;
+        }
+
+        .brief3 {
+            left: -175px;
+        }
+
+        .brief4 {
+            left: -175px;
+        }
+
+        .brief5 {
+            left: -175px;
+        }
+
+        .brief6 {
+            left: -175px;
+        }
+
+        .brief7 {
+            left: -265px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1、top部分 -->
+    <div class="header-top" style="position: relative; z-index: 0;opacity: 1;;">
+        <a href="index.html"><img src="images/header/logo-ps抠图.png" alt=""></a>
+        <div class="search" style="border:1px #ff5c38 solid; border-radius: 26px;">
+            <input type="search" class="cin" placeholder="奔跑吧 第5季">
+            <div class="hot">
+                <a href="全网热搜榜.html" target="_blank">热搜榜</a>
+            </div>
+            <div class="see"></div>
+            <button>全网搜</button>
+        </div>
+        <div class="select">
+            <img src="images/header/图标/VIP1.png" alt="">
+            <img src="images/header/图标/历史1.png" alt="">
+            <img src="images/header/图标/创作中心1.png" alt="">
+            <img src="images/header/图标/画质1.png" alt="">
+            <div class="circle">
+                <a href="QQ注册页面.html" target="_blank"><img class="register" src="images/header/图标/1-1.png" alt=""></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="challage">
+            <div class="challage-left">
+                <img src="images/极限挑战介绍/极挑.jpg" alt="">
+            </div>
+            <div class="challage-right">
+                <div class="top">
+                    <img src="images/极限挑战介绍/介绍图1.png" alt="">
+                </div>
+                <div class="introduce">
+                    <div class="tou">
+                        <div class="png"><img src="images/极限挑战介绍/雷佳音.png" alt=""></div>
+                        <span>雷佳音</span>
+                        <div class="brief1">
+                            <img src="images/极限挑战介绍/简介_雷佳音.png" alt="">
+                        </div>
+                    </div>
+                    <div class="tou">
+                        <div class="png"><img src="images/极限挑战介绍/岳云鹏.jpg" alt=""></div>
+                        <span>岳云鹏</span>
+                        <div class="brief2">
+                            <img src="images/极限挑战介绍/简介_岳云鹏.png" alt="">
+                        </div>
+                    </div>
+                    <div class="tou">
+                        <div class="png"><img src="images/极限挑战介绍/王迅.png" alt=""></div>
+                        <span>王迅</span>
+                        <div class="brief3">
+                            <img src="images/极限挑战介绍/简介_王迅.png" alt="">
+                        </div>
+                    </div>
+                    <div class="tou">
+                        <div class="png"><img src="images/极限挑战介绍/贾乃亮.png" alt=""></div>
+                        <span>贾乃亮</span>
+                        <div class="brief4">
+                            <img src="images/极限挑战介绍/简介_贾乃亮.png" alt="">
+                        </div>
+                    </div>
+                    <div class="tou">
+                        <div class="png"><img src="images/极限挑战介绍/郭京飞.jpg" alt=""></div>
+                        <span>郭京飞</span>
+                        <div class="brief5">
+                            <img src="images/极限挑战介绍/简介_郭京飞.png" alt="">
+                        </div>
+                    </div>
+                    <div class="tou">
+                        <div class="png"><img src="images/极限挑战介绍/邓伦.jpg" alt=""></div>
+                        <span>邓伦</span>
+                        <div class="brief6">
+                            <img src="images/极限挑战介绍/简介_邓伦.png" alt="">
+                        </div>
+                    </div>
+                    <div class="tou">
+                        <div class="png"><img src="images/极限挑战介绍/黄明昊.jpg" alt=""></div>
+                        <span>黄明昊</span>
+                        <div class="brief7">
+                            <img src="images/极限挑战介绍/简介_黄明昊.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="down">
+                    <div class="player">
+                        <div class="shell">
+                            <a href="https://v.qq.com/x/cover/mzc00200iy4s01o/w003903cz4a.html?" target="_blank">
+                                <img src="images/极限挑战介绍/播放.png" alt="">
+                                立即播放
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blank">
+                        <img src="images/极限挑战介绍/介绍图2.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,456 @@
+/* 公共css */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    color: #d4cac0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff5c38;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+    color: #666666;
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 27px;
+}
+
+
+/* ======= 头部css ======= */
+.out {
+    position: relative;
+    width: 1920px;
+    height: 600px;
+    margin: 0px auto;
+    background: #fff;
+
+    overflow: hidden;
+    /* background-color: rgb(194, 62, 135); */
+}
+
+/* 1 */
+.header-top {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 82px;
+    background: rgba(255, 255, 255, .2);
+
+    opacity: 0.8;
+}
+
+.header-top img {
+    float: left;
+    height: 46px;
+    margin: 18px 0px 18px 50px;
+}
+
+/* ------ */
+.header-top .search {
+    float: left;
+    margin: 16px 0px 16px 530px;
+    height: 50px;
+    width: 490px;
+}
+
+.header-top .search .cin {
+    float: left;
+    padding: 23px;
+    width: 270px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 25px 0 0 25px;
+    background-color: #fff;
+
+    font-size: 19px;
+    color: #887c6f;
+    line-height: 50px;
+    /* 重点：点击时不显示边框 */
+    outline: medium
+}
+
+.header-top .search .hot {
+    float: left;
+    padding-left: 35px;
+    width: 65px;
+    height: 50px;
+    background-color: #eae8e8;
+
+    background: url(images/header/图标/热搜榜\ \(1\).png) no-repeat #fff 1px 10px;
+
+    font-size: 17px;
+    line-height: 50px;
+}
+
+.header-top .search .see {
+    float: left;
+    width: 35px;
+    height: 50px;
+
+    background: url(images/header/图标/搜索2.png) no-repeat #ff5c38 8px 10px;
+}
+
+button {
+    float: left;
+    width: 85px;
+    height: 50px;
+    border: none;
+    border-radius: 0px 25px 25px 0px;
+    background-color: #ff5c38;
+
+    font-size: 19px;
+    color: #ffffff;
+    line-height: 50px;
+}
+
+/* ------ */
+.header-top .select {
+    float: right;
+    width: 320;
+    height: 55px;
+    margin-right: 30px;
+}
+
+.header-top .select img {
+    width: 33px;
+    height: 33px;
+    float: left;
+    margin: 20px 12px 20px;
+}
+
+.header-top .select .circle {
+    position: relative;
+    float: left;
+    margin: 18px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header-top .select .circle .register {
+    margin: -4px;
+    height: 55px;
+    width: 55px;
+    position: absolute;
+
+}
+
+/* 2 */
+.header-right_aside {
+    position: absolute;
+    z-index: 2;
+    top: 82px;
+    right: 0px;
+    padding: 12px;
+    width: 380px;
+    height: 518px;
+    background: rgba(0, 0, 0, .4);
+    color: #cac2bb;
+
+}
+
+.header-right_aside .aside-up {
+    height: 53px;
+    border-bottom: 2px solid #624d39;
+}
+
+.header-right_aside .aside-up img {
+    margin-top: 5px;
+    margin-right: 4px;
+    float: left;
+}
+
+.header-right_aside .aside-down {
+    margin-top: 10px;
+}
+
+.header-right_aside .aside-down .down {
+    position: relative;
+    height: 45px;
+}
+
+.header-right_aside .aside-down .down img {
+    position: absolute;
+    margin-top: 5px;
+    margin-right: 4px;
+}
+
+.header-right_aside .aside-down .down h2 {
+    position: absolute;
+    top: 0px;
+    left: 35px;
+    color: #ffffff;
+}
+
+.header-right_aside .aside-down li {
+    margin: 0px 36px;
+    height: 42px;
+    color: #c0b8b2;
+    line-height: 42px;
+}
+
+.header-right_aside .aside-down li:hover {
+    font-size: 25px;
+    color: #ff5c38;
+    font-weight: 600;
+}
+
+/* ul .my a {
+    font-size: 25px;
+    color: #ff5c38;
+    font-weight: 600;
+}
+
+.header-right_aside .aside-down li:hover .my a {
+    color: #c0b8b2;
+    font-size: 18px;
+} */
+
+/* 3 */
+.out .lunbotu {
+    position: absolute;
+    width: 1920px;
+    z-index: 1;
+
+    /* 相对于轮播图 */
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.out .lunbotu .donghua {
+    position: absolute;
+    width: 18144px;
+    height: 600px;
+    left: 0px;
+    top: 0px;
+    animation: move 90s ease normal infinite;
+}
+
+.out .lunbotu .donghua .tu {
+    float: left;
+}
+
+@keyframes move {
+    5% {
+        left: 0px;
+    }
+
+    10% {
+        left: -2016px;
+    }
+
+    15% {
+        left: -2016px;
+    }
+
+    20% {
+        left: -4032px;
+    }
+
+    25% {
+        left: -4032px;
+    }
+
+    30% {
+        left: -6048px;
+    }
+
+    35% {
+        left: -6048px;
+    }
+
+    40% {
+        left: -8064px;
+    }
+
+    50% {
+        left: -8064px;
+    }
+
+    55% {
+        left: -10080px;
+    }
+
+    60% {
+        left: -10080px;
+    }
+
+    65% {
+        left: -12096px;
+    }
+
+    70% {
+        left: -12096px;
+    }
+
+    75% {
+        left: -14112px;
+    }
+
+    80% {
+        left: -14112px;
+    }
+
+    85% {
+        left: -16128px;
+    }
+
+    90% {
+        left: -16128px;
+    }
+
+    /* 95% {
+        left: -18144px;
+    } */
+
+    100% {
+        left: -0px;
+    }
+}
+
+
+
+/* ======= 主体内容 部分css ======= */
+article {
+    width: 1710px;
+    margin: 0px auto;
+}
+
+/* = 广告位1号css = */
+.adv1 {
+    height: 116px;
+    margin-top: 45px;
+}
+
+div[class^=adert] {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 338px;
+    height: 116px;
+    margin-right: 3px;
+}
+
+div[class^=adert] img {
+    width: 100%;
+}
+
+div[class^=adert] .i {
+    position: absolute;
+    bottom: -30px;
+    left: 0px;
+    height: 148px;
+    width: 148px;
+}
+
+div[class^=adert] .i:hover {
+    transform: translate(0, -15%);
+}
+
+
+/* = 广告位2号css = */
+.adv2 {
+    height: 100px;
+    margin-top: 45px;
+    padding: 0px 20px;
+}
+
+.adv2-left,
+.adv2-right {
+    float: left;
+}
+
+.adv2-left {
+    margin-right: 24px;
+}
+
+.adv2 img {
+    height: 100px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+
+
+
+/* ======= 尾部css ======= */
+.line {
+    margin-top: 50px;
+}
+
+/* 1 */
+.footer {
+    width: 1280px;
+    height: 235px;
+    padding-top: 50px;
+    margin: 0px auto;
+
+}
+
+dt,
+h4 {
+    font-size: 19px;
+    font-weight: 700;
+    height: 20px;
+    line-height: 20px;
+
+    padding-bottom: 8px;
+}
+
+dd {
+    height: 15px;
+    margin-top: 15px;
+}
+
+dd a {
+    color: #666666;
+}
+
+
+div[class^=links] {
+    float: left;
+    font-size: 15px;
+    color: #666666;
+}
+
+.links2 {
+    width: 255px;
+}
+
+.links3 {
+    width: 530px;
+    margin-right: 50px;
+}
+
+/* 2 */
+
+.speak p {
+    width: 1920px;
+    margin: 0px auto 15px;
+    color: #666666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.img {
+    height: 60px;
+    width: 145px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.img a img {
+    height: 60px;
+}
